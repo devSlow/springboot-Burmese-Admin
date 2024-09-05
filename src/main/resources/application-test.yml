@@ -2,15 +2,16 @@
 # @author <a href="https://github.com/liyupi">程序员鱼皮</a>
 # @from <a href="https://yupi.icu">编程导航知识星球</a>
 server:
-  port: 8101
+  port: 8081
+  address: 0.0.0.0
 spring:
   # 数据库配置
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/my_db
+    url: jdbc:mysql://101.43.65.55:3306/burma?useUnicode=true&characterEncoding=utf-8
     username: root
-    password: 123456
+    password: Mm123456
   # Redis 配置
   # todo 需替换配置
   redis:
@@ -22,6 +23,6 @@ spring:
   # Elasticsearch 配置
   # todo 需替换配置
   elasticsearch:
-    uris: http://localhost:9200
-    username: root
-    password: 123456
+#    uris: http://localhost:9200
+#    username: root
+#    password: 123456

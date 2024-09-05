@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 主类（项目启动入口）
@@ -17,6 +19,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication(exclude = {RedisAutoConfiguration.class})
 @MapperScan("com.yupi.springbootinit.mapper")
 @EnableScheduling
+@EnableTransactionManagement
 @EnableAspectJAutoProxy(proxyTargetClass = true, exposeProxy = true)
 public class MainApplication {
 
